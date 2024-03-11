@@ -118,7 +118,7 @@ main{
     padding: 0 10px;
     height: var(--tamanho);
     animation: darken 2s ease forwards;
-    padding-top: 50px;
+    
 }
 
 @keyframes darken{
