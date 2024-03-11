@@ -6,7 +6,7 @@
     --corPrimaria: #2c2c2c;
     --brilhaCaixa: 0px 0px 35px var(--corSecundaria), 0px 0px 15px var(--corSecundaria);
     --brilhaTexto: 0px 0px 35px var(--corSecundaria), 0px 0px 15px var(--corSecundaria);
-    --tamanho: calc(100vh - 57px);
+    --tamanho: calc(100vh - 10vh);
 }
 
 
@@ -25,6 +25,7 @@ a{
 
 .main-header{
     background-color: var(--corPrimaria);
+    height: 10vh;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
