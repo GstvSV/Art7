@@ -23,6 +23,10 @@ a{
     text-decoration: none;
 }
 
+body{
+    overflow: hidden;
+}
+
 .main-header{
     background-color: var(--corPrimaria);
     height: 10vh;
