@@ -1,0 +1,37 @@
+
+
+
+.classificacao{
+    font-weight: bold;
+    font-size: 1.2rem;
+    height: 33px;
+    width: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.livre{
+    background-color: #04991B;
+}
+
+.dez{
+    background-color: #0087D2;
+}
+
+.doze{
+    background-color: #FFCD00;
+}
+
+.quatorze{
+    background-color: #FC6A03;
+}
+
+.dezesseis{
+    background-color:#FC050E;
+}
+
+.dezoito{
+    background-color: black;
+}

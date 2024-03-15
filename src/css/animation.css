@@ -1,0 +1,42 @@
+
+
+@keyframes darken{
+
+    from{
+        background-color: transparent;
+    }
+
+    to{
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+}
+
+@keyframes aparece{
+    from{
+        transform: scale(0);
+    }
+
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes brilha{
+    from{
+        text-shadow: none;
+    }
+
+    to{
+        text-shadow: var(--brilhaTexto);
+    }
+}
+
+@keyframes brilhaBox{
+    from{
+        text-shadow: none;
+    }
+
+    to{
+        box-shadow: var(--brilhaCaixa);
+    }
+}

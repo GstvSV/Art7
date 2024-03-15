@@ -1,0 +1,79 @@
+.main-header{
+    background-color: var(--corPrimaria);
+    height: 10vh;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav{
+    cursor: pointer;
+}
+
+.ham{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.ham div{
+    background-color: var(--corSecundaria);
+    width: 30px;
+    height: 3px;
+    transform-origin: center;
+    transition: all .5s ease;
+    z-index: 2;
+    
+}
+
+.header-title{
+    color: var(--corSecundaria);
+    z-index: 2;
+}
+
+.menu{
+    background-color: var(--corPrimaria);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+    padding: 10vh 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    transform: translateX(-100%);
+    transition: transform .5s ease;
+    z-index: 1;
+}
+
+.menu-item{
+    padding: 20px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+}
+
+.menu-item span{
+    font-weight: bold;
+}
+
+.home{
+    border-bottom: 1px dotted var(--corSecundaria);
+}
+
+.menu-item:hover{
+    background-color: var(--corTerciaria);
+    border-bottom: 1px solid var(--corSecundaria);
+}
+
+.menu-item:hover span{
+    color: var(--corSecundaria);
+}

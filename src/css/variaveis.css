@@ -1,0 +1,9 @@
+:root{
+    --corQuaternaria: #ffffff;
+    --corTerciaria: #2c3e50;
+    --corSecundaria: #00ffd9;
+    --corPrimaria: #2c2c2c;
+    --brilhaCaixa: 0px 0px 35px var(--corSecundaria), 0px 0px 15px var(--corSecundaria);
+    --brilhaTexto: 0px 0px 35px var(--corSecundaria), 0px 0px 15px var(--corSecundaria);
+    --tamanho: calc(100vh - 10vh);
+}

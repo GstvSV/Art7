@@ -1,0 +1,72 @@
+
+.sobre{
+    background: url(../../assets/images/background.jpg) no-repeat bottom center;
+    background-size: cover;
+    width: 100%;
+    height: var(--tamanho);
+}
+
+main{
+    color: var(--corQuaternaria);
+    width: 100%;
+    padding: 0 10px;
+    height: var(--tamanho);
+    animation: darken 2s ease forwards;
+}
+
+
+main h1{
+    transform: scale(0);
+    font-size: 9rem;
+    text-align: center;
+    animation: aparece 2s ease 2s forwards, brilha 3s 6s forwards;
+}
+
+main h2{
+    font-size: 1.5rem;
+    text-align: center;
+    transform: scale(0);
+    animation: aparece 2s ease 4s forwards, brilha 3s 6s forwards;
+}
+
+
+.details-container{
+    padding: 30px 20px 20px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: all .5s ease;
+    border-radius: 20px;
+}
+
+.button{
+    background-color: var(--corTerciaria);
+    color: var(--corQuaternaria);
+    font-size: 1rem;
+    padding: .5rem 1.5rem;
+    border: 2px solid var(--corQuaternaria);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.details{
+    transform: scale(0);
+    animation: aparece 2s ease 6s forwards, brilhaBox 3s 8s forwards;
+    
+}
+
+.button:hover{
+    transform: scale(1.2) !important;
+}
+
+.details-texto{
+    opacity: 0;
+    font-size: 1.2rem;
+    transition: all .5s ease;
+}
+
+
+
