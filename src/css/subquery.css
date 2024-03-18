@@ -1,0 +1,7 @@
+@media (min-width: 800px){
+    .itens{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+}

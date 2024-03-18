@@ -3,17 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Gustavo Silva Vieira">
-    <meta name="description" content="Site para categorizar os filmes, séries e animes">
-    <title>Document</title>
-    <link rel="stylesheet" href="./src/css/index.css">
-    <link rel="stylesheet" href="./src/css/variaveis.css">
-    <link rel="stylesheet" href="./src/css/animation.css">
-    <link rel="stylesheet" href="./src/css/menu.css">
+    <title>Art7</title>
     <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/variaveis.css">
+    <link rel="stylesheet" href="./src/css/menu.css">
+    <link rel="stylesheet" href="./src/css/categoria.css">
+    <link rel="stylesheet" href="./src/css/geral.css">
+    <link rel="stylesheet" href="./src/css/index.css">
 </head>
 <body>
-
     <header class="main-header">
         <nav class="nav">
             <div class="ham">
@@ -22,38 +20,51 @@
                 <div></div>
             </div>
             <menu class="menu">
-                <a class="menu-item" href="../../index.html">
+                <a class="menu-item" href="./index.html">
                     <h4 class="item-title home">Home</h4>
-                    <span>></span>
-                </a>
-                <a class="menu-item" href="./src/html/filmes.html">
-                    <h4 class="item-title">Filmes</h4>
-                    <span>></span>
-                </a>
-                <a class="menu-item" href="./src/html/series.html">
-                    <h4 class="item-title">Séries</h4>
                     <span>></span>
                 </a>
                 <a class="menu-item" href="./src/html/animes.html">
                     <h4 class="item-title">Animes</h4>
                     <span>></span>
                 </a>
+                <a class="menu-item" href="./src/html/series.html">
+                    <h4 class="item-title">Séries</h4>
+                    <span>></span>
+                </a>
+                <a class="menu-item" href="./src/html/filmes.html">
+                    <h4 class="item-title">Filmes</h4>
+                    <span>></span>
+                </a>
             </menu>
         </nav>
         <h1 class="header-title">Art7</h1>      
     </header>
-    <section class="sobre">
-        <main>
+
+    <main>
+        <div>
             <h1>Art7</h1>
             <h2>A enciclopédia da sétima arte</h2>
-            <div class="details-container">
-                <p class="details-texto">Embarque nesta jornada conosco, no Art7, onde a paixão pelo cinema, anime e séries se encontra com a curiosidade ilimitada. <br><br> Sinta-se à vontade para explorar, descobrir suas próximas experiências favoritas e mergulhar fundo no mundo mágico da sétima arte!</p>
-                <button class="button details">+ detalhes</button>
-            </div>
-        </main>
-    </section>
+        </div>
+        <div class="categorias">
+            <section class="categoria animes">
+                <a  href="./src/html/animes.html">Animes</a>
+            </section>
+            <section class="categoria series">
+                <a  href="">Séries</a>
+            </section>
+            <section class="categoria filmes">
+                <a  href="">Filmes</a>
+            </section>
+        </div>
+    </main>
+
+
+
+
+
+
 
     <script src="./src/js/menu.js"></script>
-    <script src="./src/js/index.js"></script>
 </body>
 </html>

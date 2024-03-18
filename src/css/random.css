@@ -1,0 +1,47 @@
+
+
+.random{
+    padding-top: 100px;
+    user-select: none;
+}
+
+.random h3{
+    font-size: 1.5rem;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.resultado-container{
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: var(--brilhaTexto);
+}
+
+.resultado{
+    cursor: default;
+    opacity: 0;
+}
+
+.filtro-container{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.filtro{
+    font-size: 1.3rem;
+    padding: 10px 15px;
+    border: 1px solid;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.filtro:hover{
+    border-color: var(--corSecundaria);
+    box-shadow: var(--brilhaCaixa);
+}
