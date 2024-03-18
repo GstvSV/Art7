@@ -61,14 +61,14 @@ h2{
 }
 
 .item img{
-    width: 190px;
-    height: 285px;
+    width: 100px;
+    height: 150px;
 }
 
 .item h4{
     box-sizing: border-box;
     font-size: .8rem;
-    max-width: 190px;
+    max-width: 100px;
     padding: 10px;
     text-align: center;
 }
