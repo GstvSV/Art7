@@ -1,0 +1,11 @@
+@media (min-width: 800px){
+    .control-container{
+        flex-direction: column;
+    }
+
+    .filtro-container{
+        order: 0;
+        padding-top: 50px;
+        flex-direction: row;
+    }
+}

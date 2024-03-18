@@ -1,0 +1,23 @@
+@media (min-width: 400px){
+    .item img{
+        width: 150px;
+        height: 225px;
+    }
+
+    .item h4{
+        max-width: 150px;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 800px){
+    .item img{
+        width: 200px;
+        height: 300px;
+    }
+
+    .item h4{
+        max-width: 200px;
+        font-size: 1.2rem;
+    }
+}
