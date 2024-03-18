@@ -4,21 +4,16 @@ main{
     padding-bottom: 200px;
 }
 
-.title{
-    text-align: center;
-    padding: 30px 30px 50px;
-    box-sizing: border-box;
-}
-
-.title h1{
-    font-size: 7rem;
+main h1{
+    font-size: 6rem;
     text-shadow: var(--brilhaTexto);
 }
 
-.title h2{
+h2{
     font-size: 2rem;
     padding-top: 20px;
     text-decoration: underline;
+    text-align: center;
 }
 
 .categoria h3{
