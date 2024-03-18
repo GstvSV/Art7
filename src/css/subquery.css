@@ -1,6 +1,0 @@
-@media (min-width: 800px){
-    .itens{
-        flex-direction: row;
-        align-items: flex-start;
-    }
-}
