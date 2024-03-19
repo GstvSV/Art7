@@ -15,7 +15,7 @@ botoes.forEach((botao,i) => {
 
             escolhido = formatarNome(lista,resultado);
             
-            resultadoImage.src = "./../../assets/images/animes/" + lista[escolhido] + ".jpg"
+            resultadoImage.src = "./../../../assets/images/animes/" + lista[escolhido] + ".jpg"
             resultado.addEventListener("click", () => {
                 window.location.href = "./../../src/html/animes/" + lista[escolhido] + ".html";
             })
