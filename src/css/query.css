@@ -1,0 +1,19 @@
+@media (min-width: 800px){
+    
+    body{
+        background: url(./../../assets/images/backgroundbig.jpg) no-repeat bottom left ;
+        background-size: cover
+    }
+
+    header{
+        margin-bottom: 50px;
+    }
+
+    .categorias{
+        padding: 120px 0 200px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+    }
+}

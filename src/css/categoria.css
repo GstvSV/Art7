@@ -1,3 +1,8 @@
+main h1{
+    font-size: 7rem;
+    text-shadow: var(--brilhaTexto);
+}
+
 .categorias{
     padding: 50px 20px;
     display: flex;
