@@ -2,7 +2,7 @@
     
     body{
         background: url(./../../assets/images/backgroundbig.jpg) no-repeat bottom left ;
-        background-size: cover
+        background-size: cover;
     }
 
     header{
@@ -10,10 +10,17 @@
     }
 
     .categorias{
-        padding: 120px 0 200px;
+        padding: 80px 0 200px;
+    }
+
+    .categorias-container{
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 100px;
     }
+
+    .meio{
+        transform: scale(1) !important;
+    }
+
 }

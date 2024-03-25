@@ -1,0 +1,46 @@
+
+.categoria{
+    transition: all .5s ease;
+    
+}
+
+.meio{
+    text-shadow: var(--brilhaTexto);
+    transform: scale(2) !important;
+    opacity: 1; 
+}
+
+.lados{
+    opacity: 0;
+}
+
+.seta-direita{
+    order: 4;
+}
+
+.setonas{
+    width: 100px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    cursor: pointer;
+}
+
+.setinhas{
+    background-color: var(--corQuaternaria);
+    height: 50%;
+    width: 5px;
+}
+
+@media (max-width: 800px){
+    .setonas{
+        transform: rotate(90deg);
+        width: 30px;
+    }
+
+    .setinhas{
+        height: 50%;
+    }
+}

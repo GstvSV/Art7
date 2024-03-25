@@ -1,13 +1,15 @@
+
 body{
     background: url(./../../assets/images/background.jpg) no-repeat bottom left ;
     background-size: cover;
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
 }
 
 main{
     color: var(--corQuaternaria);  
+    min-height: 100vh;
 }
 
 main h1{

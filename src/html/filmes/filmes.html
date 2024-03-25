@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./../../../src/css/geral.css">
     <link rel="stylesheet" href="./../../../src/css/categoria.css">
     <link rel="stylesheet" href="./../../../src/css/query.css">
+    <link rel="stylesheet" href="./../../../src/css/slider.css">
     
 </head>
 <body>
@@ -45,15 +46,25 @@
     <main>
         <h1>Filmes</h1>
         <div class="categorias">
-            <section class="categoria assistir">
-                <a href="#">Assistir</a>
-            </section>
-            <section class="categoria assistido">
-                <a href="#">Assistido</a>
-            </section>
-            <section class="categoria todos">
-                <a href="#">Todos</a>
-            </section>
+            <div class="categorias-container">
+                <div class="seta-esquerda setonas">
+                    <div class="setinhas setinha-esq"></div>
+                    <div class="setinhas setinha-esq"></div>
+                </div>
+                <section class="categoria assistir lados">
+                    <a  href="">Assistir</a>
+                </section>
+                <section class="categoria assistido meio">
+                    <a  href="">Assistido</a>
+                </section>
+                <section class="categoria todos lados">
+                    <a  href="">Todos</a>
+                </section>
+                <div class="seta-direita setonas">
+                    <div class="setinhas setinha-dir"></div>
+                    <div class="setinhas setinha-dir"></div>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -62,7 +73,7 @@
 
 
 
-
+    <script src="./../../js/slider.js"></script>
     <script src="./../../js/menu.js"></script>
 </body>
 </html>
