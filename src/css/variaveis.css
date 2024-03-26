@@ -6,4 +6,8 @@
     --brilhaCaixa: 0px 0px 35px var(--corSecundaria), 0px 0px 15px var(--corSecundaria);
     --brilhaTexto: 0px 0px 35px var(--corSecundaria), 0px 0px 15px var(--corSecundaria);
     --tamanho: calc(100vh - 10vh);
+
+    --corDarkAlfa: rgb(44, 44, 44, .8);
+    --corlightAlfa: rgb(255, 255, 255, .2);
+
 }

@@ -3,7 +3,8 @@ body{
 }
 
 main{
-    background-color: rgb(0, 0, 0, .8);
+    background-color: var(--corDarkAlfa);
+    color: var(--corQuaternaria);
     padding-bottom: 200px;
     position: relative;
 }
@@ -69,7 +70,7 @@ h2{
 }
 
 .item:hover::after{
-    background-color: rgb(255, 255, 255, .2);
+    background-color: var(--corlightAlfa);
 }
 
 .item img{

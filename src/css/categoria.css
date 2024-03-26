@@ -4,7 +4,7 @@ main h1{
 }
 
 .categorias-container{
-    background-color: rgb(0, 0, 0, .8);
+    background-color: var(--corDarkAlfa);
     height: 400px;
     padding: 0px 20px;
     margin-top: 50px;

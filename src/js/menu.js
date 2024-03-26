@@ -6,7 +6,7 @@ function menuMove(){
     const menu = document.querySelector(".menu");
     let status = false;
 
-    nav.addEventListener("click", () => {
+    ham.addEventListener("click", () => {
         if(status === false){
             hamPartes[0].style.transform = "translateY(5px) rotate(45deg)";
             hamPartes[1].style.opacity = 0;

@@ -1,0 +1,25 @@
+
+.troca-container{
+    cursor: pointer;
+}
+
+.claro{
+    background-color: var(--corQuaternaria);
+    width: 30px;
+    height: 30px;
+    margin: 50px 0 0 20px;
+    border-bottom: 1px solid var(--corQuaternaria);
+    border-radius: 50%;
+    position: relative;
+}
+
+.escuro{
+    background-color: var(--corPrimaria);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    top: 2px;
+    position: absolute;
+    transform: translateX(35%);
+    transition: all 1s ease;
+}
