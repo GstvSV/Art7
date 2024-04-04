@@ -20,7 +20,6 @@ const animes = [
     { nome: "Pokemon", categoria: "Aventura", imagem: "./../../../assets/images/animes/pokemon.jpg", link: "#", visto: false },
     { nome: "Tate no Yuusha", categoria: "Aventura", imagem: "./../../../assets/images/animes/tate-no-yuusha.jpg", link: "#", visto: false },
     { nome: "Kono Subarashii Sekai ni Shukufuko wo!", categoria: "Aventura", imagem: "./../../../assets/images/animes/kono-subarashii-sekai-ni-shukufuko-wo!.jpg", link: "#", visto: false },
-    { nome: "Mondaiji-tachi Ga Isekai Kara Kuru Sou Desu Yo", categoria: "Aventura", imagem: "./../../../assets/images/animes/mondaiji-tachi-ga-isekai-kara-kuru-sou-desu-yo.jpg", link: "#", visto: false },
     { nome: "Seisen Cerberus", categoria: "Aventura", imagem: "./../../../assets/images/animes/seisen-cerberus.jpg", link: "#", visto: false },
 
     { nome: "Little Witch Academia", categoria: "Fantasia", imagem: "./../../../assets/images/animes/little-witch-academia.jpg", link: "#", visto: true },
@@ -65,7 +64,6 @@ const animes = [
     { nome: "Hitsugi no Chaika", categoria: "Acao", imagem: "./../../../assets/images/animes/hitsugi-no-chaika.jpg", link: "#", visto: false },
     { nome: "Fate", categoria: "Acao", imagem: "./../../../assets/images/animes/fate.jpg", link: "#", visto: false },
     { nome: "Tales of The Abyss", categoria: "Acao", imagem: "./../../../assets/images/animes/tales-of-the-abyss.jpg", link: "#", visto: false },
-    { nome: "Cross Ange", categoria: "Acao", imagem: "./../../../assets/images/animes/cross-ange.jpg", link: "#", visto: false },
     { nome: "Freezing", categoria: "Acao", imagem: "./../../../assets/images/animes/freezing.jpg", link: "#", visto: false },
     { nome: "Busou Renkin", categoria: "Acao", imagem: "./../../../assets/images/animes/busou-renkin.jpg", link: "#", visto: false },
     { nome: "World Trigger", categoria: "Acao", imagem: "./../../../assets/images/animes/world-trigger.jpg", link: "#", visto: false },
@@ -268,6 +266,212 @@ function adicionarAnimes(categoria, listaId) {
     }
 }
 
+const buttons = document.querySelectorAll(".filtro");
+const containerResultado = document.querySelector(".resultado-container")
+let aleatorio;
+let novaLista;
+
+if(window.location.pathname.includes('assistido.html')) {
+    buttons.forEach((button, i) => {
+        button.addEventListener("click", () => {
+            if(button.classList.contains("action")){
+                novaLista = animes.filter(anime => anime.categoria === "Acao" && anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("adventure")){
+                novaLista = animes.filter(anime => anime.categoria === "Aventura" && anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("fantasy")){
+                novaLista = animes.filter(anime => anime.categoria === "Fantasia" && anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("comedy")){
+                novaLista = animes.filter(anime => anime.categoria === "Comedia" && anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("romance")){
+                novaLista = animes.filter(anime => anime.categoria === "Romance" && anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("drama")){
+                novaLista = animes.filter(anime => anime.categoria === "Drama" && anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("suspense")){
+                novaLista = animes.filter(anime => anime.categoria === "Suspense" && anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("terror")){
+                novaLista = animes.filter(anime => anime.categoria === "Terror" && anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("ecchi")){
+                novaLista = animes.filter(anime => anime.categoria === "Ecchi" && anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("all")){
+                novaLista = animes.filter(anime => anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }   
+
+            if (containerResultado.firstChild) {
+                containerResultado.removeChild(containerResultado.firstChild);
+            }
+
+            if(novaLista.length > 0){
+                const animeDiv = document.createElement('div');
+                animeDiv.classList.add('item');
+        
+                const animeLink = document.createElement('a');
+                animeLink.href = novaLista[aleatorio].link;
+        
+                const animeImg = document.createElement('img');
+                animeImg.src = novaLista[aleatorio].imagem;
+                animeImg.alt = novaLista[aleatorio].nome;
+        
+                const h4Anime = document.createElement('h4');
+                h4Anime.textContent = novaLista[aleatorio].nome;
+                
+                animeLink.appendChild(animeImg);
+                animeLink.appendChild(h4Anime);
+                animeDiv.appendChild(animeLink);
+                containerResultado.appendChild(animeDiv);
+
+            }else{
+                containerResultado.innerHTML = "Não há itens nesta categoria!";
+            }
+
+        })
+    })
+}
+
+if(window.location.pathname.includes('assistir.html')) {
+    buttons.forEach((button, i) => {
+        button.addEventListener("click", () => {
+            if(button.classList.contains("action")){
+                novaLista = animes.filter(anime => anime.categoria === "Acao" && !anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("adventure")){
+                novaLista = animes.filter(anime => anime.categoria === "Aventura" && !anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("fantasy")){
+                novaLista = animes.filter(anime => anime.categoria === "Fantasia" && !anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("comedy")){
+                novaLista = animes.filter(anime => anime.categoria === "Comedia" && !anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("romance")){
+                novaLista = animes.filter(anime => anime.categoria === "Romance" && !anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("drama")){
+                novaLista = animes.filter(anime => anime.categoria === "Drama" && !anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("suspense")){
+                novaLista = animes.filter(anime => anime.categoria === "Suspense" && !anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("terror")){
+                novaLista = animes.filter(anime => anime.categoria === "Terror" && !anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("ecchi")){
+                novaLista = animes.filter(anime => anime.categoria === "Ecchi" && !anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("all")){
+                novaLista = animes.filter(anime => anime.visto);
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }   
+
+            if (containerResultado.firstChild) {
+                containerResultado.removeChild(containerResultado.firstChild);
+            }
+
+            if(novaLista.length > 0){
+                const animeDiv = document.createElement('div');
+                animeDiv.classList.add('item');
+        
+                const animeLink = document.createElement('a');
+                animeLink.href = novaLista[aleatorio].link;
+        
+                const animeImg = document.createElement('img');
+                animeImg.src = novaLista[aleatorio].imagem;
+                animeImg.alt = novaLista[aleatorio].nome;
+        
+                const h4Anime = document.createElement('h4');
+                h4Anime.textContent = novaLista[aleatorio].nome;
+                
+                animeLink.appendChild(animeImg);
+                animeLink.appendChild(h4Anime);
+                animeDiv.appendChild(animeLink);
+                containerResultado.appendChild(animeDiv);
+
+            }else{
+                containerResultado.innerHTML = "Não há itens nesta categoria!";
+            }
+
+        })
+    })
+}
+
+if(window.location.pathname.includes('todos.html')) {
+    buttons.forEach((button, i) => {
+        button.addEventListener("click", () => {
+            if(button.classList.contains("action")){
+                novaLista = animes.filter(anime => anime.categoria === "Acao");
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("adventure")){
+                novaLista = animes.filter(anime => anime.categoria === "Aventura");
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("fantasy")){
+                novaLista = animes.filter(anime => anime.categoria === "Fantasia");
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("comedy")){
+                novaLista = animes.filter(anime => anime.categoria === "Comedia");
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("romance")){
+                novaLista = animes.filter(anime => anime.categoria === "Romance");
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("drama")){
+                novaLista = animes.filter(anime => anime.categoria === "Drama");
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("suspense")){
+                novaLista = animes.filter(anime => anime.categoria === "Suspense");
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("terror")){
+                novaLista = animes.filter(anime => anime.categoria === "Terror");
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("ecchi")){
+                novaLista = animes.filter(anime => anime.categoria === "Ecchi");
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }else if(button.classList.contains("all")){
+                novaLista = animes
+                aleatorio = Math.floor(Math.random() * novaLista.length);
+            }   
+
+            if (containerResultado.firstChild) {
+                containerResultado.removeChild(containerResultado.firstChild);
+            }
+
+            if(novaLista.length > 0){
+                const animeDiv = document.createElement('div');
+                animeDiv.classList.add('item');
+        
+                const animeLink = document.createElement('a');
+                animeLink.href = novaLista[aleatorio].link;
+        
+                const animeImg = document.createElement('img');
+                animeImg.src = novaLista[aleatorio].imagem;
+                animeImg.alt = novaLista[aleatorio].nome;
+        
+                const h4Anime = document.createElement('h4');
+                h4Anime.textContent = novaLista[aleatorio].nome;
+                
+                animeLink.appendChild(animeImg);
+                animeLink.appendChild(h4Anime);
+                animeDiv.appendChild(animeLink);
+                containerResultado.appendChild(animeDiv);
+
+            }else{
+                containerResultado.innerHTML = "Não há itens nesta categoria!";
+            }
+
+        })
+    })
+}
+
+
+
+
     adicionarAnimes('Aventura', 'aventura');
     adicionarAnimes('Fantasia', 'fantasia');
     adicionarAnimes('Acao', 'acao');
@@ -278,3 +482,12 @@ function adicionarAnimes(categoria, listaId) {
     adicionarAnimes('Terror', 'terror');
     adicionarAnimes('Ecchi', 'ecchi');  
     
+
+    const categories = document.querySelectorAll(".categoria");
+    
+    categories.forEach((categorie, i) => {
+        const categoriesItens = document.querySelectorAll(".itens");
+        if (categoriesItens.innerHTML.trim() === '') {
+            categorie.style.order = 10;
+        }
+    })

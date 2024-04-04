@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art7</title>
+    <link rel="stylesheet" href="./../../../src/css/reset.css">
+    <link rel="stylesheet" href="./../../../src/css/variaveis.css">
+    <link rel="stylesheet" href="./../../../src/css/menu.css">
+    <link rel="stylesheet" href="./../../../src/css/geral.css">
+    <link rel="stylesheet" href="./../../../src/css/subcategoria.css">
+    <link rel="stylesheet" href="./../../../src/css/subquery.css">
+    <link rel="stylesheet" href="./../../../src/css/random.css">
+    <link rel="stylesheet" href="./../../../src/css/randomquery.css">
+    <link rel="stylesheet" href="./../../../src/css/seta.css">
+    <link rel="stylesheet" href="./../../../src/css/updown.css">
+    <link rel="stylesheet" href="./../../../src/css/claro.css">
+
+</head>
+<body>
+    <header class="main-header" id="inicio">
+        <nav class="nav">
+            <div class="ham">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <menu class="menu">
+                <a class="menu-item" href="./../../../index.html">
+                    <h4 class="item-title home">Home</h4>
+                    <span>></span>
+                </a>
+                <a class="menu-item" href="./../../../src/html/animes/animes.html">
+                    <h4 class="item-title">Animes</h4>
+                    <span>></span>
+                </a>
+                <a class="menu-item" href="./../../../src/html/series/series.html">
+                    <h4 class="item-title">Séries</h4>
+                    <span>></span>
+                </a>
+                <a class="menu-item" href="./../../../src/html/filmes/filmes.html">
+                    <h4 class="item-title">Filmes</h4>
+                    <span>></span>
+                </a>
+                <div class="troca-container">
+                    <div class="claro">
+                        <div class="escuro"></div>
+                    </div>
+                </div>
+            </menu>
+        </nav>
+        <h1 class="header-title">Art7</h1>      
+    </header>
+
+    <main>
+
+        <h1>Filmes</h1>
+        <div class="main-sub-title">
+            <a href="./assistido.html"><</a>
+            <h2>Todos</h2>
+            <a href="./assistir.html">></a>
+        </div>
+
+        <div class="categorias">
+            <div class="categoria aventura">
+                <div class="title">
+                    <h3>Aventura:</h3>
+                    <div class="seta">
+                        <span class="parte cima"></span>
+                        <span class="parte baixo"></span>
+                    </div>
+                </div>
+                <div class="itens adventure" id="aventura"></div>
+            </div>
+            <div class="categoria fantasia">
+                <div class="title">
+                    <h3>Fantasia:</h3>
+                    <div class="seta">
+                        <span class="parte cima"></span>
+                        <span class="parte baixo"></span>
+                    </div>
+                </div>
+                <div class="itens fantasy" id="fantasia"></div> 
+            </div>
+            <div class="categoria acao">
+                <div class="title">
+                    <h3>Ação:</h3>
+                    <div class="seta">
+                        <span class="parte cima"></span>
+                        <span class="parte baixo"></span>
+                    </div>
+                </div>
+                <div class="itens action" id="acao"></div>
+            </div>
+            <div class="categoria comedia">
+                <div class="title">
+                    <h3>Comédia:</h3>
+                    <div class="seta">
+                        <span class="parte cima"></span>
+                        <span class="parte baixo"></span>
+                    </div>
+                </div>
+                <div class="itens comedy" id="comedia"></div>
+                
+            </div>
+            <div class="categoria drama">
+                <div class="title">
+                    <h3>Drama:</h3>
+                    <div class="seta">
+                        <span class="parte cima"></span>
+                        <span class="parte baixo"></span>
+                    </div>
+                    
+                </div>
+                <div class="itens drama" id="drama"></div>
+            </div>
+            <div class="categoria romance">
+                <div class="title">
+                    <h3>Romance:</h3>
+                    <div class="seta">
+                        <span class="parte cima"></span>
+                        <span class="parte baixo"></span>
+                    </div>   
+                </div>
+                <div class="itens romance" id="romance"></div>
+            </div>
+            <div class="categoria suspense">
+                <div class="title">
+                    <h3>Suspense:</h3>
+                    <div class="seta">
+                        <span class="parte cima"></span>
+                        <span class="parte baixo"></span>
+                    </div>
+                </div>
+                <div class="itens suspense" id="suspense"></div>
+            </div>
+            <div class="categoria terror">
+                <div class="title">
+                    <h3>Terror:</h3>
+                    <div class="seta">
+                        <span class="parte cima"></span>
+                        <span class="parte baixo"></span>
+                    </div>
+                </div>
+                <div class="itens terror" id="terror"></div>
+            </div>
+        </div>
+        
+        <div class="random" id="fim">
+            <h3>Precisando de uma sugestão? Que gênero gostaria de ver?</h3>
+            <div class="control-container">
+                <div class="resultado-container"></div>
+                <div class="filtro-container">
+                    <div class="filtro all">Qualquer</div>
+                    <div class="filtro action">Ação</div>
+                    <div class="filtro adventure">Aventura</div>
+                    <div class="filtro fantasy">Fantasia</div>
+                    <div class="filtro comedy">Comédia</div>
+                    <div class="filtro romance">Romance</div>
+                    <div class="filtro drama">Drama</div>
+                    <div class="filtro suspense">Suspense</div>
+                    <div class="filtro terror">Terror</div>
+                </div>
+            </div>
+        </div>
+        <a href="#inicio" class="up">
+            <span class="part esq"></span>
+            <span class="part meio"></span>
+            <span class="part dir"></span>
+        </a>
+    </main>
+
+    <script src="./../../../src/js/menu.js"></script>
+    <script src="./../../../src/js/seta.js"></script>
+    <script src="./../../../src/js/updown.js"></script>
+    <script src="./../../../src/js/claro.js"></script>
+    <script src="./../../../src/js/filmesItens.js"></script>
+</body>
+</html>
